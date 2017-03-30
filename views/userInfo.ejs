@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<table class="table" style="width: 50%; margin: 0 auto; ">
+		<thead>
+			<tr bgcolor="skyblue">
+				<th width="50%">Name</th>
+				<th width="50%">Gender</th>
+				<th width="50%">Crop</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% var listRecords = records %>
+			<% for(var i=0;i<listRecords.length;i++) {%>
+				<tr>
+					<td><%= listRecords[i].FullName__c %></td>
+					<td><%= listRecords[i].Gender__c %></td>
+					<!-- bellow code is crops related -->
+					<td><%= listRecords[0].Crops__r.records[0].Id %></td>
+					
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+
+</body>
+</html>
