@@ -18,12 +18,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.locals.config = {
-					CLIENTID:'3MVG9Y6d_Btp4xp7Y0Ey5p47FNFeSryjslrLdEZm0.C1xQzxQlZ_hI7qZVOKqqAUiZSTYgwG6Ar23m_bHmNPE',
-					CLIENTSECRET:'7506196926188510534',
+					CLIENTID:'client Id',
+					CLIENTSECRET:'secret',
 					REDIRECTURI:'localhost',
-					USERNAME:'murali@bellpoll.com',
-					PASSWORD:'farmer*528*',
-					LOGINURL:'https://agriculture-dev-ed.my.salesforce.com' 
+					USERNAME:'USERNAME',
+					PASSWORD:'PASSWORD',
+					LOGINURL:'https://login.salesforce.com' 
 					};
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

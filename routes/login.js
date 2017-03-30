@@ -6,22 +6,22 @@ var dotenv = require('dotenv').config('/config/ConfigOAuth.env');
 
 var conn = new jsforce.Connection({
   oauth2 : {
-      loginUrl : 'https://agriculture-dev-ed.my.salesforce.com',//process.env.LOGINURL,
-      clientId : '3MVG9Y6d_Btp4xp7Y0Ey5p47FNFeSryjslrLdEZm0.C1xQzxQlZ_hI7qZVOKqqAUiZSTYgwG6Ar23m_bHmNPE',//process.env.CLIENTID,
-      clientSecret : '7506196926188510534',//process.env.CLIENTSECRET,
+      loginUrl : 'https://login.salesforce.com',//process.env.LOGINURL,
+      clientId : '',//process.env.CLIENTID,
+      clientSecret : '',//process.env.CLIENTSECRET,
       redirectUri : 'localhost'//process.env.REDIRECTURI
     }
 });
-// var username = configs.USERNAME;//'murali@bellpoll.com';//process.env.USERNAME;
-// var password = configs.PASSWORD;//'farmer*528*';//process.env.;
+// var username = configs.USERNAME;//process.env.USERNAME;
+// var password = configs.PASSWORD;//process.env.;
 var records = [];
 // callback style query
 
 
 router.get('/userInfo', function(req, res, next) {
   var configs= req.app.locals.config;
-var username = configs.USERNAME;//'murali@bellpoll.com';//process.env.USERNAME;
-var password = configs.PASSWORD;//'farmer*528*';//process.env.;
+var username = configs.USERNAME;//process.env.USERNAME;
+var password = configs.PASSWORD;//process.env.;
 conn.login(username, password, function(err, userInfo) {
        // console.log(req.app.locals.config);
 
